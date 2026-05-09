@@ -1,0 +1,22 @@
+@use './variables' as *;
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: $color-bg;
+  color: $color-text;
+  font-family: $font-family-base;
+
+  &__main {
+    flex: 1;
+    padding: $space-lg;
+  }
+
+  &__fallback {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 40vh;
+  }
+}

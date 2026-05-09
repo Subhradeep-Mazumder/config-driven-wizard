@@ -1,0 +1,160 @@
+{
+    "id": "sample-onboarding",
+    "title": "Sample Onboarding Wizard",
+    "steps": [
+      {
+        "id": "account",
+        "title": "Account",
+        "description": "Basic account details. Showcases text, email, and password fields with sync + async validation.",
+        "fields": [
+          {
+            "name": "fullName",
+            "label": "Full name",
+            "type": "text",
+            "placeholder": "Ada Lovelace",
+            "validations": [
+              { "type": "required", "message": "Full name is required" },
+              { "type": "minLength", "value": 2, "message": "At least 2 characters" },
+              { "type": "maxLength", "value": 60, "message": "At most 60 characters" }
+            ]
+          },
+          {
+            "name": "email",
+            "label": "Email",
+            "type": "email",
+            "placeholder": "you@example.com",
+            "validations": [
+              { "type": "required", "message": "Email is required" },
+              { "type": "email", "message": "Enter a valid email" },
+              {
+                "type": "asyncUnique",
+                "message": "This email is already registered (try taken@example.com to see the error)"
+              }
+            ]
+          },
+          {
+            "name": "password",
+            "label": "Password",
+            "type": "password",
+            "validations": [
+              { "type": "required", "message": "Password is required" },
+              { "type": "minLength", "value": 8, "message": "At least 8 characters" },
+              {
+                "type": "pattern",
+                "value": "^(?=.*[A-Za-z])(?=.*\\d).+$",
+                "message": "Must contain at least one letter and one number"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "profile",
+        "title": "Profile",
+        "description": "Shows select, number, date, textarea, and conditional fields (visibleWhen).",
+        "fields": [
+          {
+            "name": "country",
+            "label": "Country",
+            "type": "select",
+            "options": [
+              { "value": "us", "label": "United States" },
+              { "value": "in", "label": "India" },
+              { "value": "de", "label": "Germany" },
+              { "value": "other", "label": "Other" }
+            ],
+            "validations": [{ "type": "required", "message": "Choose a country" }]
+          },
+          {
+            "name": "zip",
+            "label": "ZIP / Postal code",
+            "type": "text",
+            "placeholder": "e.g. 94107",
+            "visibleWhen": { "field": "country", "equals": "us" },
+            "validations": [
+              { "type": "required", "message": "ZIP is required" },
+              {
+                "type": "pattern",
+                "value": "^[A-Za-z0-9 -]{3,10}$",
+                "message": "Invalid ZIP format"
+              }
+            ]
+          },
+          {
+            "name": "age",
+            "label": "Age",
+            "type": "number",
+            "validations": [
+              { "type": "required", "message": "Age is required" },
+              { "type": "pattern", "value": "^[0-9]{1,3}$", "message": "Numbers only" }
+            ]
+          },
+          {
+            "name": "dob",
+            "label": "Date of birth",
+            "type": "date"
+          },
+          {
+            "name": "bio",
+            "label": "Short bio",
+            "type": "textarea",
+            "placeholder": "Tell us about yourself…",
+            "validations": [
+              { "type": "maxLength", "value": 280, "message": "Keep it under 280 characters" }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "preferences",
+        "title": "Preferences",
+        "description": "Shows radio and checkbox field types.",
+        "fields": [
+          {
+            "name": "plan",
+            "label": "Plan",
+            "type": "radio",
+            "options": [
+              { "value": "free", "label": "Free" },
+              { "value": "pro", "label": "Pro" },
+              { "value": "enterprise", "label": "Enterprise" }
+            ],
+            "validations": [{ "type": "required", "message": "Pick a plan" }]
+          },
+          {
+            "name": "newsletter",
+            "label": "Subscribe to the newsletter",
+            "type": "checkbox",
+            "defaultValue": false
+          }
+        ]
+      },
+      {
+        "id": "compliance",
+        "title": "Compliance (Admin only)",
+        "description": "This step is visible only when the logged-in user has the 'admin' role (visibleForRoles).",
+        "visibleForRoles": ["admin"],
+        "fields": [
+          {
+            "name": "attestation",
+            "label": "I attest the information provided is accurate",
+            "type": "checkbox",
+            "validations": [{ "type": "required", "message": "You must attest to continue" }]
+          },
+          {
+            "name": "internalNotes",
+            "label": "Internal notes (admin only field)",
+            "type": "textarea",
+            "visibleForRoles": ["admin"]
+          }
+        ]
+      },
+      {
+        "id": "review",
+        "title": "Review",
+        "description": "Empty-fields step renders a JSON summary of the values you entered; Submit triggers SSE status updates.",
+        "fields": []
+      }
+    ]
+  }
+  

@@ -1,0 +1,27 @@
+{
+    "name": "config-driven-wizard",
+    "version": "1.0.0",
+    "private": true,
+    "description": "Config-driven multi-step Wizard (monorepo: frontend + backend).",
+    "workspaces": [
+      "frontend",
+      "backend"
+    ],
+    "scripts": {
+      "dev": "concurrently -n web,api -c cyan,magenta \"npm -w frontend run start\" \"npm -w backend run start\"",
+      "start": "npm -w frontend run start",
+      "start:server": "npm -w backend run start",
+      "build": "npm -w frontend run build",
+      "test": "npm -w frontend run test",
+      "test:watch": "npm -w frontend run test:watch",
+      "test:coverage": "npm -w frontend run test:coverage",
+      "lint": "npm -w frontend run lint",
+      "lint:fix": "npm -w frontend run lint:fix",
+      "format": "npm -w frontend run format",
+      "analyze": "npm -w frontend run analyze"
+    },
+    "devDependencies": {
+      "concurrently": "^8.2.2"
+    }
+  }
+  

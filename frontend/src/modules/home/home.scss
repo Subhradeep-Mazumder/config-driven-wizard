@@ -1,0 +1,16 @@
+@use '../../variables' as *;
+
+.home {
+  max-width: 720px;
+  margin: 0 auto;
+
+  &__title {
+    margin-top: 0;
+  }
+
+  &__actions {
+    margin-top: $space-lg;
+    display: flex;
+    gap: $space-md;
+  }
+}

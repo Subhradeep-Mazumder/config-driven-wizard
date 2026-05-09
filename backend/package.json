@@ -1,0 +1,22 @@
+{
+    "name": "@cdw/backend",
+    "version": "1.0.0",
+    "private": true,
+    "description": "Express mock backend for Config-Driven Wizard (login, SSE, wizard mocks).",
+    "scripts": {
+      "start": "ts-node --project tsconfig.json src/index.ts",
+      "build": "tsc -p tsconfig.json"
+    },
+    "dependencies": {
+      "cors": "^2.8.5",
+      "express": "^4.19.2"
+    },
+    "devDependencies": {
+      "@types/cors": "^2.8.17",
+      "@types/express": "^4.17.21",
+      "@types/node": "^20.14.8",
+      "ts-node": "^10.9.2",
+      "typescript": "^5.5.2"
+    }
+  }
+  
