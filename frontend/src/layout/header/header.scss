@@ -1,0 +1,36 @@
+@use '../../variables' as *;
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $space-md $space-lg;
+  background: $color-primary;
+  color: #fff;
+  z-index: $z-header;
+
+  &__title {
+    font-size: $font-size-xl;
+    font-weight: 600;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: $space-md;
+  }
+
+  &__skip {
+    position: absolute;
+    left: -9999px;
+
+    &:focus {
+      left: $space-md;
+      top: $space-md;
+      background: #fff;
+      color: $color-primary;
+      padding: $space-sm $space-md;
+      z-index: $z-modal;
+    }
+  }
+}

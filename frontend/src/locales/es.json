@@ -1,0 +1,71 @@
+{
+    "app": { "title": "Asistente Basado en Configuración" },
+    "header": {
+      "nav": "Navegación principal",
+      "language": "Idioma",
+      "logout": "Cerrar sesión",
+      "greeting": "Hola, {{name}}",
+      "skipToContent": "Saltar al contenido principal"
+    },
+    "footer": { "copy": "© {{year}} Asistente Basado en Configuración" },
+    "login": {
+      "title": "Iniciar sesión",
+      "username": "Usuario",
+      "password": "Contraseña",
+      "submit": "Iniciar sesión",
+      "submitting": "Ingresando…",
+      "hint": "Prueba 'admin' / 'admin' o 'user' / 'user'."
+    },
+    "home": {
+      "welcome": "Bienvenido, {{name}}",
+      "intro": "Inicia el asistente de incorporación para completar tu cuenta.",
+      "startWizard": "Iniciar asistente"
+    },
+    "builder": {
+      "title": "Configuración del asistente (JSON)",
+      "hint": "Pega o edita un JSON debajo. La vista previa de la derecha se actualiza al hacer clic en Aplicar.",
+      "toolbar": "Acciones del editor",
+      "jsonLabel": "JSON de configuración",
+      "apply": "Aplicar",
+      "reset": "Restablecer ejemplo",
+      "valid": "JSON válido",
+      "invalid": "Inválido"
+    },
+    "wizard": {
+      "nav": "Pasos del asistente",
+      "back": "Atrás",
+      "next": "Siguiente",
+      "submit": "Enviar",
+      "reset": "Reiniciar",
+      "checking": "Comprobando…",
+      "loading": "Cargando asistente",
+      "empty": "No hay pasos disponibles para tu rol.",
+      "verifying": "Verificando tu envío",
+      "submitted": "Enviado con éxito",
+      "waitingForUpdates": "Esperando actualizaciones de estado…",
+      "reviewLabel": "Revisión de valores",
+      "completed": {
+        "title": "Envío aprobado",
+        "body": "Tu envío ha sido aceptado.",
+        "askNew": "¿Quieres iniciar un nuevo envío?",
+        "startNew": "Iniciar nuevo"
+      },
+      "error": {
+        "title": "Algo salió mal",
+        "retry": "Reintentar",
+        "dismiss": "Descartar"
+      },
+      "status": {
+        "idle": "Inactivo",
+        "in-progress": "En curso",
+        "verifying": "Verificando",
+        "completed": "Completado",
+        "failed": "Fallido"
+      },
+      "errors": {
+        "submit": "Error al enviar. Inténtalo de nuevo.",
+        "asyncFailed": "No se pudo verificar la unicidad del correo. Reintenta."
+      }
+    }
+  }
+  

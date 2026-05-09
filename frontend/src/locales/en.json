@@ -1,0 +1,71 @@
+{
+    "app": { "title": "Config-Driven Wizard" },
+    "header": {
+      "nav": "Primary navigation",
+      "language": "Language",
+      "logout": "Log out",
+      "greeting": "Hi, {{name}}",
+      "skipToContent": "Skip to main content"
+    },
+    "footer": { "copy": "© {{year}} Config-Driven Wizard" },
+    "login": {
+      "title": "Sign in",
+      "username": "Username",
+      "password": "Password",
+      "submit": "Sign in",
+      "submitting": "Signing in…",
+      "hint": "Try 'admin' / 'admin' or 'user' / 'user'."
+    },
+    "home": {
+      "welcome": "Welcome, {{name}}",
+      "intro": "Start the onboarding wizard to complete your account.",
+      "startWizard": "Start wizard"
+    },
+    "builder": {
+      "title": "Wizard configuration (JSON)",
+      "hint": "Paste or edit a JSON config below. The preview on the right updates when you click Apply.",
+      "toolbar": "Builder actions",
+      "jsonLabel": "Configuration JSON",
+      "apply": "Apply",
+      "reset": "Reset to sample",
+      "valid": "Valid JSON",
+      "invalid": "Invalid"
+    },
+    "wizard": {
+      "nav": "Wizard steps",
+      "back": "Back",
+      "next": "Next",
+      "submit": "Submit",
+      "reset": "Reset",
+      "checking": "Checking…",
+      "loading": "Loading wizard",
+      "empty": "No steps available for your role.",
+      "verifying": "Verifying your submission",
+      "submitted": "Submitted successfully",
+      "waitingForUpdates": "Waiting for status updates…",
+      "reviewLabel": "Review of values",
+      "completed": {
+        "title": "Submission approved",
+        "body": "Your submission has been accepted.",
+        "askNew": "Would you like to start a new submission?",
+        "startNew": "Start new"
+      },
+      "error": {
+        "title": "Something went wrong",
+        "retry": "Retry",
+        "dismiss": "Dismiss"
+      },
+      "status": {
+        "idle": "Idle",
+        "in-progress": "In progress",
+        "verifying": "Verifying",
+        "completed": "Completed",
+        "failed": "Failed"
+      },
+      "errors": {
+        "submit": "Submission failed. Please try again.",
+        "asyncFailed": "Could not verify email uniqueness. Try again."
+      }
+    }
+  }
+  
