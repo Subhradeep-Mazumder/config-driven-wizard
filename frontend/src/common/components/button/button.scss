@@ -1,0 +1,17 @@
+@use '../../../variables' as *;
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $space-sm;
+  min-height: 36px;
+  padding: $space-sm $space-md;
+  border-radius: $radius-sm;
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+
+  &--full {
+    width: 100%;
+  }
+}

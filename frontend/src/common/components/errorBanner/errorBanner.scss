@@ -1,0 +1,11 @@
+@use '../../../variables' as *;
+
+.errorBanner {
+  margin-bottom: $space-md;
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: $space-xs;
+  }
+}
