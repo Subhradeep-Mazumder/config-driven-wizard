@@ -1,0 +1,34 @@
+@use '../../variables' as *;
+
+.login {
+  max-width: 420px;
+  margin: $space-xl auto;
+  padding: $space-xl;
+  background: $color-bg-elevated;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: $space-lg;
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+    gap: $space-sm;
+    margin-bottom: $space-md;
+  }
+
+  &__hint {
+    font-size: $font-size-sm;
+    color: $color-text-muted;
+    margin-top: $space-md;
+  }
+
+  &__error {
+    color: $color-error;
+    font-size: $font-size-sm;
+    margin-top: $space-sm;
+  }
+}

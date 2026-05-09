@@ -1,0 +1,132 @@
+@use '../../variables' as *;
+
+.wizard {
+  box-sizing: border-box;
+  max-width: 860px;
+  width: 100%;
+  margin: 0 auto;
+  background: $color-bg-elevated;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  padding: $space-xl;
+  overflow-wrap: break-word;
+
+  @media (max-width: 640px) {
+    padding: $space-md;
+  }
+
+  &__title {
+    margin-top: 0;
+    overflow-wrap: break-word;
+  }
+
+  &__nav {
+    display: flex;
+    gap: $space-sm;
+    flex-wrap: wrap;
+    margin: 0 0 $space-lg;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__navItem {
+    padding: $space-sm $space-md;
+    border-radius: $radius-sm;
+    background: #eee;
+    color: $color-text-muted;
+    font-size: $font-size-sm;
+    max-width: 100%;
+    overflow-wrap: break-word;
+
+    &--active {
+      background: $color-primary;
+      color: #fff;
+    }
+
+    &--done {
+      background: $color-success;
+      color: #fff;
+    }
+  }
+
+  &__step {
+    display: flex;
+    flex-direction: column;
+    gap: $space-md;
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: $space-xs;
+  }
+
+  &__error {
+    color: $color-error;
+    font-size: $font-size-sm;
+  }
+
+  &__actions {
+    display: flex;
+    gap: $space-md;
+    justify-content: space-between;
+    margin-top: $space-lg;
+  }
+
+  &__actionsRight {
+    display: flex;
+    gap: $space-md;
+  }
+
+  &--full {
+    min-height: 360px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__fullView {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $space-md;
+    text-align: center;
+    padding: $space-lg;
+    max-width: 520px;
+
+    &--ok {
+      color: $color-success;
+    }
+  }
+
+  &__fullTitle {
+    margin: 0;
+    color: inherit;
+    font-size: 22px;
+  }
+
+  &__fullMessage {
+    margin: 0;
+    color: $color-text;
+    font-size: $font-size-base;
+  }
+
+  &__fullPrompt {
+    margin: $space-sm 0 0;
+    color: $color-text-muted;
+  }
+
+  &__fullActions {
+    display: flex;
+    gap: $space-md;
+    margin-top: $space-sm;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__review {
+    background: #f7f7f7;
+    padding: $space-md;
+    border-radius: $radius-sm;
+  }
+}

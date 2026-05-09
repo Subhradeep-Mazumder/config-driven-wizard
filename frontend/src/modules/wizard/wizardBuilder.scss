@@ -1,0 +1,88 @@
+@use '../../variables' as *;
+
+.builder {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: $space-lg;
+  padding: $space-lg;
+  min-height: calc(100vh - 200px);
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
+
+  &__editor {
+    display: flex;
+    flex-direction: column;
+    gap: $space-sm;
+    background: $color-bg-elevated;
+    border: 1px solid $color-border;
+    border-radius: 8px;
+    padding: $space-md;
+    min-width: 0;
+  }
+
+  &__title {
+    margin: 0;
+    font-size: 18px;
+    color: $color-text;
+  }
+
+  &__hint {
+    margin: 0 0 $space-sm;
+    color: $color-text-muted;
+    font-size: 13px;
+  }
+
+  &__toolbar {
+    display: flex;
+    gap: $space-sm;
+    flex-wrap: wrap;
+    margin-bottom: $space-sm;
+  }
+
+  &__label {
+    font-size: 13px;
+    color: $color-text-muted;
+  }
+
+  &__textarea {
+    flex: 1;
+    min-height: 420px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 13px;
+    line-height: 1.5;
+    padding: $space-sm;
+    border: 1px solid $color-border;
+    border-radius: 4px;
+    resize: vertical;
+    background: $color-bg;
+    color: $color-text;
+
+    &:focus {
+      outline: 2px solid $color-primary;
+      outline-offset: 1px;
+    }
+  }
+
+  &__status {
+    font-size: 13px;
+    min-height: 20px;
+
+    &--ok {
+      color: $color-success;
+    }
+
+    &--err {
+      color: $color-error;
+    }
+  }
+
+  &__preview {
+    background: $color-bg-elevated;
+    border: 1px solid $color-border;
+    border-radius: 8px;
+    padding: $space-md;
+    min-width: 0;
+  }
+}
